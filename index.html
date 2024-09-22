@@ -252,10 +252,10 @@
     let eqalsto =document.getElementById("eqalsto")
        eqalsto.addEventListener("click",function(){
         //  str=str+"4"
-        result=eval(str)
-        if(result!=undefined){
+        str=eval(str)
+        if(str!=undefined){
             var inp=document.getElementById("inp")
-         inp.value=result;
+         inp.value=str;
         }
          console.log(result)
          str=""
