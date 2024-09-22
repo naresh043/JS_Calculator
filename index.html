@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        th{
+            border: 2px solid ;
+            border-radius: 10px;
+            background-image: linear-gradient(#181818,#BA8B02);
+            color: white;
+            font-size: 30px;
+        }
+        #clear,#bsub,#percentage,#division,#multi,#minas,#plus,#delet{
+          background-image: linear-gradient(#181818,#135058);
+        }
+        #eqalsto{
+          background-image: linear-gradient(#ed213a,#93291e);
+
+        }
+       
+        table{
+           /* border-collapse: collapse; */
+            width: 300px ;
+            height: 300px;
+        }
+        input{
+            width: 290px;
+            height: 50px;
+            border: 2px solid ;
+            border-radius: 10px;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        div{
+          display: inline-block;
+          border: 2px solid ;
+          padding: 15px;
+          border-radius: 10px;
+          background-color: #135058;
+        }
+        body {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+      margin: 0; 
+      background-image: url("./blurred_wp2497619.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="" id="inp" />
+      <table>
+        <tr>
+            <th id="clear">CE</th>
+            <th id="bsub">+/-</th>
+            <th id="percentage"><i class="fa-solid fa-percent"></i></th>
+            <th id="division"><i class="fa-solid fa-divide"></i></th>
+          </tr>
+        <tr>
+          <th id="one">1</th>
+          <th id="two">2</th>
+          <th id="three">3</th>
+          <th id="multi"><i class="fa-solid fa-xmark"></i></th>
+        </tr>
+        <tr>
+            <th id="four">4</th>
+            <th id="five">5</th>
+            <th id="six">6</th>
+            <th id="minas"><i class="fa-solid fa-minus"></i></th>
+          </tr>
+          <tr>
+            <th id="seven">7</th>
+            <th id="eight">8</th>
+            <th id="nine">9</th>
+            <th id="plus"><i class="fa-solid fa-plus"></i></th>
+          </tr>
+          <tr>
+            <th id="zero">0</th>
+            <th id="dot">.</th>
+            <th id="delet"><i class="fa-solid fa-delete-left"></i></th>
+            <th id="eqalsto"><i class="fa-solid fa-equals"></i></th>
+          </tr>
+      </table>
+    </div>
+
+
+
+
+    <script>
+       let str=""
+
+    //    first row
+     let clear=document.getElementById("clear")
+       clear.addEventListener("click",function(){
+         str=""
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let bsub=document.getElementById("bsub")
+       bsub.addEventListener("click",function(){
+         str="-"+str
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let percentage=document.getElementById("percentage")
+       percentage.addEventListener("click",function(){
+         str=str+"/100"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let division=document.getElementById("division")
+       division.addEventListener("click",function(){
+         str=str+"/"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+    //    one number
+       let one=document.getElementById("one")
+       one.addEventListener("click",function(){
+         str=str+"1"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+       
+      let two =document.getElementById("two")
+       two.addEventListener("click",function(){
+         str=str+"2"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+       let three =document.getElementById("three")
+       three.addEventListener("click",function(){
+         str=str+"3"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let multiply=document.getElementById("multi")
+       multiply.addEventListener("click",function(){
+         str=str+"*"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let four =document.getElementById("four")
+       four.addEventListener("click",function(){
+         str=str+"4"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let five =document.getElementById("five")
+       five.addEventListener("click",function(){
+         str=str+"5"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let six =document.getElementById("six")
+       six.addEventListener("click",function(){
+         str=str+"6"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let minas =document.getElementById("minas")
+       minas.addEventListener("click",function(){
+         str=str+"-"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let seven =document.getElementById("seven")
+       seven.addEventListener("click",function(){
+         str=str+"7"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let eight =document.getElementById("eight")
+       eight.addEventListener("click",function(){
+         str=str+"8"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let nine =document.getElementById("nine")
+       nine.addEventListener("click",function(){
+         str=str+"9"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let plus =document.getElementById("plus")
+       plus.addEventListener("click",function(){
+         str=str+"+"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let zero =document.getElementById("zero")
+       zero.addEventListener("click",function(){
+         str=str+"0"
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+
+       let dot =document.getElementById("dot")
+       dot.addEventListener("click",function(){
+         str=str+"."
+         var inp=document.getElementById("inp")
+         inp.value=str
+         console.log(str)
+       })
+    //  delet button
+       let delet =document.getElementById("delet")
+       delet.addEventListener("click",function(){
+        str=str.slice(0, -1);
+         var inp=document.getElementById("inp")
+         inp.value=str;
+         console.log(str)
+       })
+    let eqalsto =document.getElementById("eqalsto")
+       eqalsto.addEventListener("click",function(){
+        //  str=str+"4"
+        result=eval(str)
+        if(result!=undefined){
+            var inp=document.getElementById("inp")
+         inp.value=result;
+        }
+         console.log(result)
+         str=""
+       })
+       
+
+    </script>
+  </body>
+</html>
